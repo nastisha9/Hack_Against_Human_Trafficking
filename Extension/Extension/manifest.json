@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Job Analysis for Human Trafficking",
+    "version": "1.0.0",
+    "description": "This extension will help you identify potential human trafficking activity on current job postings.",
+    "action":{
+        "default_popup": "humantraffickext.html",
+        "default_icon": "assets/hackathon.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "host_permissions": [
+        "http://*/*"
+    ]
+}
